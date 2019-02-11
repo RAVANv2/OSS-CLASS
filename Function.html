@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>My first extension  </h1>
+<script  type="text/javascript">
+	function funcky(){
+		alert("ohh no");//alert is for pop up when we do wrong stps
+	}
+
+	function f1(x){
+		square=x*x;
+		document.write("square of " + x + " is " + square+"</br>" );
+		
+		
+	}	
+	f1(9);
+	
+	function tooeasy(a,b){
+		var c=a+b;
+		document.write(c + "</br>");
+		
+	}
+	tooeasy(3,4);
+	
+	tooeasy(8,9);
+
+	// syntax of break line is "</br>"
+
+	function tooeasy1(a,b){
+		temp=a/b;
+		return temp;
+	}
+	document.write(tooeasy1(10,5) + "</br>");
+	document.write(tooeasy1(5,2) + "</br>");
+
+	//CALLING A FUNCTION FROM ANOTHER FUNCTION
+
+	function dofirst(){
+		document.write("hey I am the first" + "</br>")
+	}	
+	
+	function dosecond(){
+		document.write("hey I am the second")
+	}
+
+	function start(){
+		dofirst();
+		dosecond();
+	}
+
+	start();	
+
+	// IMPORTANT NOTE:
+	// when we declare the var inside the function than that var was locally declared and we use tht inside of function
+	// When we declared the var outside the function that it declared gobally and we use both inside and outside of function
+	
+
+
+</script>
+
+<form>
+	<!--DOUBT-->
+	<!--As continue with function of funcky-->
+	<input type="button" value="submit" onclick="funcky(),f1(10)" style="color:red; background:yellow;">
+	<!--doubt(function f1 will call on new page which i don't want)-->
+</form>
+
+
+
+	
+</body>
+</html>
